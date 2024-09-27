@@ -8,7 +8,7 @@ const contactRoutes = require('./routes/contact.routes');
 
 app.use(cors(
     {
-        origin: ['https://devsumukha.vercel.app/'],
+        origin: ['https://devsumukha.vercel.app/api/user/contact'],
         methods: ['GET','POST'],
         credentials: true
     }
