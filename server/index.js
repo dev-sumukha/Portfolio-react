@@ -6,13 +6,14 @@ const cors = require('cors');
 
 const contactRoutes = require('./routes/contact.routes');
 
-const corsOptions = {
-    origin:'http://localhost:5173',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-}
-
+app.use(cors(
+    {
+        origin: ['https://devsumukha.vercel.app/'],
+        methods: ['GET','POST'],
+        credentials: true
+    }
+));
 app.use(express.json());
-app.use(cors(corsOptions));
 
 app.use('/api/user',contactRoutes);
 
