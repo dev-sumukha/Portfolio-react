@@ -21,10 +21,10 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    axios.defaults.withCredentials = true;
     // Use toast.promise to show a loading message and update based on the outcome
     toast.promise(
-      axios.post('http://localhost:3000/api/user/contact', user), // Promise
+      axios.post('https://portfolio-react-api.vercel.app/api/user/contact', user), // Promise
       {
         pending: 'Processing...', // Loading message
         success: 'Message sent successfully!', // Success message
