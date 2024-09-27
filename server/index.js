@@ -1,23 +1,23 @@
-require('dotenv').config()
+require('dotenv').config();
 const express = require('express');
-const app = express();
-
 const cors = require('cors');
-
+const app = express();
 const contactRoutes = require('./routes/contact.routes');
 
-app.use(cors(
-    {
-        origin: ['https://devsumukha.vercel.app/api/user/contact'],
-        methods: ['GET','POST'],
-        credentials: true
-    }
-));
+// Use the CORS middleware with specific options
+app.use(cors({
+  origin: 'https://devsumukha.vercel.app', // Frontend domain
+  methods: ['GET', 'POST'],
+  credentials: true,
+}));
+
+// Parse incoming JSON requests
 app.use(express.json());
 
-app.use('/api/user',contactRoutes);
+// API routes
+app.use('/api/user', contactRoutes);
 
-
-app.listen(process.env.PORT,()=>{
-    console.log('server started');
+// Start the server
+app.listen(process.env.PORT, () => {
+  console.log('Server started on port ' + process.env.PORT);
 });
