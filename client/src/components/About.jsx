@@ -9,7 +9,7 @@ function About() {
             <h2 className="text-3xl font-bold tracking-tight">About Me</h2>
             <p className="mt-4 text-muted-foreground">
               I am a recent graduate with a degree in Computer Science. During my studies, I developed a strong passion for{' '}
-              <strong>web development</strong> and <strong>machine learning</strong>, and I have been honing my skills in various technologies and frameworks.
+              <strong>Web Development</strong> and <strong>Cyber Security</strong>, and I have been honing my skills in various technologies and frameworks.
             </p>
             <p className="mt-4 text-muted-foreground">
               I am a quick learner, a problem-solver, and a team player. I am excited to apply my knowledge and skills to real-world projects and contribute to the growth and success of the companies I work with.
